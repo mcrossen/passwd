@@ -18,6 +18,8 @@ USER_SHELL = "/usr/sbin/nologin"
 
 FILE_IN = File.read(PASSWORDS_FILE).lines.map do |line|
   line.strip
+end.reject do |line|
+  line.start_with? "#" or line == ""
 end
 SHADOW_FILE = FILE_IN.each_with_index.map do |pass, index|
   [

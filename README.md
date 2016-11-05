@@ -12,11 +12,4 @@ unshadow passwd shadow > unshadowed
 passwordmeter.com contains a simple utility that gauges how secure a password is. For this lab, I created a few different passwords for each password strength that the site listed. These categories are: very weak, weak, good, and strong. I created fake passwd files for each of these categories and recorded how long it took to crack each file. We were told to use the lab machines in the CS department, but these don't have John the Ripper installed on them. Instead, I used a simple raspberry pi as my cracking minion.
 
 ## Results
-The following table shows how long each category took to crack.
-
-category  | time
---------- | ----
-very weak | 3 s
-weak      |   s
-good      |   s
-strong    |   s
+The pi found the weakest passwords very quickly, but was unable to find any other passwords. It maintained a steady cracking rate of 1800 passwords per second.
